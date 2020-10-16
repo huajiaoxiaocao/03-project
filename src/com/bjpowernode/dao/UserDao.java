@@ -71,4 +71,25 @@ public class UserDao {
         }
         return result;
     }
+    // 验证用户信息
+    public int login(String userName, String password){
+        String sql = "select count(*) from users where userName=? and password=?";
+        ResultSet rs = null;
+        int result = 0;
+        PreparedStatement ps = null;
+        ps = ju.createStatement(sql);
+        try {
+            ps.setString(1, userName);
+            ps.setString(2, password);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                result = rs.getInt("count(*)");
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            ju.close(rs);
+        }
+        return result;
+    }
 }
