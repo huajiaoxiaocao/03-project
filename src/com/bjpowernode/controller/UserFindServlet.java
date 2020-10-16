@@ -27,6 +27,7 @@ public class UserFindServlet extends HttpServlet {
         out.print("<td>用户密码</td>");
         out.print("<td>用户性别</td>");
         out.print("<td>用户邮箱</td>");
+        out.print("<td>删除操作</td>");
         out.print("</tr>");
         for(Users user:userList){
             out.print("<tr>");
@@ -35,6 +36,7 @@ public class UserFindServlet extends HttpServlet {
             out.print("<td>******</td>");
             out.print("<td>"+user.getSex()+"</td>");
             out.print("<td>"+user.getEmail()+"</td>");
+            out.print("<td><a href='/myWeb/user/delete?userId="+user.getUserId()+"'>删除用户</a></td>");
             out.print("</tr>");
         }
         out.print("</table>");

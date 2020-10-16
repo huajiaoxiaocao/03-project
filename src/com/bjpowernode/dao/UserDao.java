@@ -56,5 +56,19 @@ public class UserDao {
 
         return usersList;
     }
-
+    // 删除用户信息
+    public int delete(String userId){
+        String sql="delete from users where userId=?";
+        int result=0;
+        PreparedStatement ps = ju.createStatement(sql);
+        try {
+            ps.setInt(1,Integer.valueOf(userId));
+            result = ps.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            ju.close();
+        }
+        return result;
+    }
 }
