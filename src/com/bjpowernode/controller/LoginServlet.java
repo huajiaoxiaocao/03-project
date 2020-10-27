@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class LoginServlet extends HttpServlet {
@@ -22,6 +23,9 @@ public class LoginServlet extends HttpServlet {
         result = dao.login(userName, password);
         //4.根据验证结果，将对应【资源文件地址】发送给浏览器
         if(result==1) {//用户存在
+            // 创建session对象
+            HttpSession session = request.getSession();
+
             response.sendRedirect("/myWeb/index.html");
         }else{
             response.sendRedirect("/myWeb/login_error.html");
