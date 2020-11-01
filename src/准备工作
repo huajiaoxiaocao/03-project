@@ -28,3 +28,23 @@
 
     4.在web下WEB-INF下创建lib文件夹，存放mysql提供的JDBC实现jar包
 
+任务： 在线考试管理系统----试题信息管理模块
+
+子任务：
+    添加试题
+    查询试题
+    删除试题
+    更新试题
+
+准备工作：
+    1.准备试题信息表： 单选题，每道题有四个选项，一个正确答案
+        create table question(
+            questionId int primary key auto_increment,
+            title varchar(50), #10-8=?
+            optionA varchar(20), #A: 9
+            optionB varchar(20), #B: 1
+            optionC varchar(20), #C: 2
+            optionD varchar(20), #D: 0
+            answer char(1)       #正确答案：C
+        )
+    2.com.bjpowernode.entity.Question

@@ -19,6 +19,38 @@
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.bjpowernode.controller.LoginServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>QuestionAddServlet</servlet-name>
+        <servlet-class>com.bjpowernode.controller.QuestionAddServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QuestionFindServlet</servlet-name>
+        <servlet-class>com.bjpowernode.controller.QuestionFindServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QuestionDeleteServlet</servlet-name>
+        <servlet-class>com.bjpowernode.controller.QuestionDeleteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QuestionFindByIdServlet</servlet-name>
+        <servlet-class>com.bjpowernode.controller.QuestionFindByIdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QuestionFindByIdServlet</servlet-name>
+        <url-pattern>/question/findById</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QuestionDeleteServlet</servlet-name>
+        <url-pattern>/question/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QuestionFindServlet</servlet-name>
+        <url-pattern>/question/find</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QuestionAddServlet</servlet-name>
+        <url-pattern>/question/add</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>UserAddServlet</servlet-name>
         <url-pattern>/user/add</url-pattern>
