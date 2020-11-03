@@ -35,6 +35,30 @@
         <servlet-name>QuestionFindByIdServlet</servlet-name>
         <servlet-class>com.bjpowernode.controller.QuestionFindByIdServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>QuestionUpdateServlet</servlet-name>
+        <servlet-class>com.bjpowernode.controller.QuestionUpdateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QuestionRandServlet</servlet-name>
+        <servlet-class>com.bjpowernode.controller.QuestionRandServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ExamServlet</servlet-name>
+        <servlet-class>com.bjpowernode.controller.ExamServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExamServlet</servlet-name>
+        <url-pattern>/question/exam</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QuestionRandServlet</servlet-name>
+        <url-pattern>/question/rand</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QuestionUpdateServlet</servlet-name>
+        <url-pattern>/question/update</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>QuestionFindByIdServlet</servlet-name>
         <url-pattern>/question/findById</url-pattern>

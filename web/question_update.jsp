@@ -16,11 +16,11 @@
 
     %>
     <center>
-        <form action="/myWeb/question/add" method="get">
+        <form action="/myWeb/question/update" method="get">
             <table border="2">
                 <tr>
                     <td>题目编号：</td>
-                    <td><input type="text" name="questionId" value="<%=question.getQuestionId()%>"></td>
+                    <td><input type="text" name="questionId" value="<%=question.getQuestionId()%>" readonly></td>
                 </tr>
                 <tr>
                     <td>题目:</td>
